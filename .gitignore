@@ -7,6 +7,7 @@
 .idea/
 
 .gradle/
+reports/
 
 # Package Files #
 *.jar
