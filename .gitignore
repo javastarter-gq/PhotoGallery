@@ -5,6 +5,7 @@
 
 # Idea project
 .idea/
+*.iml
 
 .gradle/
 reports/
