@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>gq.javastarters</groupId>
+    <artifactId>photogallery</artifactId>
+    <version>0.1.0</version>
+    <packaging>jar</packaging>
+    <name>RESTful Photo Gallery - sample lite microservice</name>
+
+    <parent>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-parent</artifactId>
+          <version>1.3.5.RELEASE</version>
+          <relativePath/> <!-- lookup parent from repository -->
+     </parent>
+
+    <properties>
+        <jdk.version>1.8</jdk.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <surefire.version>2.18.1</surefire.version>
+    </properties>
+
+    <!-- Add the JCenter Maven repository that is required by spock-reports -->
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <name>JCenter Repo</name>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!--Spring Boot-->
+          <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-web</artifactId>
+          </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-data-jpa</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-jdbc</artifactId>-->
+        <!--</dependency>-->
+        <!-- Overrides the JUnit version specified by spock-core -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <!-- Spock Framework basic dependencies: -->
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>2.4.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <!-- The version have to be compatible with Groovy -->
+            <version>1.0-groovy-2.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-spring</artifactId>
+            <version>1.0-groovy-2.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- To use Hamcrest matchers: -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- To mock classes: -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>3.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Use with cglib to mock classes without default constructor: -->
+        <dependency>
+            <groupId>org.objenesis</groupId>
+            <artifactId>objenesis</artifactId>
+            <version>2.1</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!-- Creates the test report -->
+        <dependency>
+            <groupId>com.athaydes</groupId>
+            <artifactId>spock-reports</artifactId>
+            <version>1.2.7</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>photogallery</finalName>
+        <plugins>
+            <!-- compiles Groovy code. -->
+            <plugin>
+                <!-- GMavenPlus plugin -->
+                <groupId>org.codehaus.gmavenplus</groupId>
+                <artifactId>gmavenplus-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!--<goal>addSources</goal> -->
+
+                            <!-- Invokes the addTestSources goal that adds Groovy tests source to the project's test sources -->
+                            <goal>addTestSources</goal>
+
+                            <!--<goal>generateStubs</goal> -->
+                            <goal>compile</goal>
+
+                            <!--<goal>testGenerateStubs</goal>-->
+
+                            <!-- Invokes the testCompile goal that compiles our Spock tests -->
+                            <goal>testCompile</goal>
+
+                            <!--<goal>removeStubs</goal> -->
+                            <!--<goal>removeTestStubs</goal>-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+            <!-- Used for unit tests -->
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Spec.java</include> <!-- Yes, .java extension -->
+                        <include>**/*Test.java</include> <!-- Just in case having "normal" JUnit tests -->
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+</project>
