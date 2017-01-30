@@ -34,24 +34,47 @@
     </repositories>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
         <!--Spring Boot-->
         <dependency>
            <groupId>org.springframework.boot</groupId>
            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.thymeleaf</groupId>
-            <artifactId>thymeleaf</artifactId>
-            <version>3.0.0.RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.thymeleaf</groupId>
-            <artifactId>thymeleaf-testing</artifactId>
-            <version>3.0.0.RELEASE</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.thymeleaf</groupId>-->
+            <!--<artifactId>thymeleaf</artifactId>-->
+            <!--<version>3.0.0.RELEASE</version>-->
+            <!--<scope>compile</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.thymeleaf</groupId>-->
+            <!--<artifactId>thymeleaf-testing</artifactId>-->
+            <!--<version>3.0.0.RELEASE</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
 
         <!--<dependency>-->
@@ -65,232 +88,238 @@
 
 
         <!-- Overrides the JUnit version specified by spock-core -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>junit</groupId>-->
+            <!--<artifactId>junit</artifactId>-->
+            <!--<version>4.12</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
 
 
-        <dependency>
-            <!-- Spock Framework basic dependencies: -->
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>2.4.1</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--&lt;!&ndash; Spock Framework basic dependencies: &ndash;&gt;-->
+            <!--<groupId>org.codehaus.groovy</groupId>-->
+            <!--<artifactId>groovy-all</artifactId>-->
+            <!--<version>2.4.1</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.spockframework</groupId>
-            <artifactId>spock-core</artifactId>
-            <!-- The version have to be compatible with Groovy -->
-            <version>1.0-groovy-2.4</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.spockframework</groupId>-->
+            <!--<artifactId>spock-core</artifactId>-->
+            <!--&lt;!&ndash; The version have to be compatible with Groovy &ndash;&gt;-->
+            <!--<version>1.0-groovy-2.4</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.spockframework</groupId>
-            <artifactId>spock-spring</artifactId>
-            <version>1.0-groovy-2.4</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.spockframework</groupId>-->
+            <!--<artifactId>spock-spring</artifactId>-->
+            <!--<version>1.0-groovy-2.4</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
-        <!-- To use Hamcrest matchers: -->
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-            <version>1.3</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- To mock classes: -->
-        <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib-nodep</artifactId>
-            <version>3.1</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- Use with cglib to mock classes without default constructor: -->
-        <dependency>
-            <groupId>org.objenesis</groupId>
-            <artifactId>objenesis</artifactId>
-            <version>2.1</version>
-            <scope>test</scope>
-        </dependency>
+        <!--&lt;!&ndash; To use Hamcrest matchers: &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.hamcrest</groupId>-->
+            <!--<artifactId>hamcrest-core</artifactId>-->
+            <!--<version>1.3</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash; To mock classes: &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>cglib</groupId>-->
+            <!--<artifactId>cglib-nodep</artifactId>-->
+            <!--<version>3.1</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash; Use with cglib to mock classes without default constructor: &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.objenesis</groupId>-->
+            <!--<artifactId>objenesis</artifactId>-->
+            <!--<version>2.1</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
 
-        <!-- Creates the test report -->
-        <dependency>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.7.6.201602180812</version>
-        </dependency>
+        <!--&lt;!&ndash; Creates the test report &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.jacoco</groupId>-->
+            <!--<artifactId>jacoco-maven-plugin</artifactId>-->
+            <!--<version>0.7.6.201602180812</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>com.athaydes</groupId>
-            <artifactId>spock-reports</artifactId>
-            <version>1.2.11</version>
-            <scope>test</scope>
-            <!-- this avoids affecting your version of Groovy/Spock -->
-            <exclusions>
-                <exclusion>
-                  <groupId>*</groupId>
-                  <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.athaydes</groupId>-->
+            <!--<artifactId>spock-reports</artifactId>-->
+            <!--<version>1.2.11</version>-->
+            <!--<scope>test</scope>-->
+            <!--&lt;!&ndash; this avoids affecting your version of Groovy/Spock &ndash;&gt;-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                  <!--<groupId>*</groupId>-->
+                  <!--<artifactId>*</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
 
-        <!-- // if you don't already have slf4j-api and an implementation of it in the classpath, add this! -->
-        <dependency>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
-          <version>1.7.13</version>
-          <scope>test</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-simple</artifactId>
-          <version>1.7.13</version>
-          <scope>test</scope>
-        </dependency>
+        <!--&lt;!&ndash; // if you don't already have slf4j-api and an implementation of it in the classpath, add this! &ndash;&gt;-->
+        <!--<dependency>-->
+          <!--<groupId>org.slf4j</groupId>-->
+          <!--<artifactId>slf4j-api</artifactId>-->
+          <!--<version>1.7.13</version>-->
+          <!--<scope>test</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+          <!--<groupId>org.slf4j</groupId>-->
+          <!--<artifactId>slf4j-simple</artifactId>-->
+          <!--<version>1.7.13</version>-->
+          <!--<scope>test</scope>-->
+        <!--</dependency>-->
 </dependencies>
 
     <build>
         <finalName>photogallery</finalName>
         <plugins>
-            <!-- compiles Groovy code. -->
             <plugin>
-                <!-- GMavenPlus plugin -->
-                <groupId>org.codehaus.gmavenplus</groupId>
-                <artifactId>gmavenplus-plugin</artifactId>
-                <version>1.5</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <!--<goal>addSources</goal> -->
-
-                            <!-- Invokes the addTestSources goal that adds Groovy tests source to the project's test sources -->
-                            <goal>addTestSources</goal>
-
-                            <!--<goal>generateStubs</goal> -->
-                            <goal>compile</goal>
-
-                            <!--<goal>testGenerateStubs</goal>-->
-
-                            <!-- Invokes the testCompile goal that compiles our Spock tests -->
-                            <goal>testCompile</goal>
-
-                            <!--<goal>removeStubs</goal> -->
-                            <!--<goal>removeTestStubs</goal>-->
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                </configuration>
-            </plugin>
-            <!-- Used for unit tests -->
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${surefire.version}</version>
-                <configuration>
-                    <includes>
-                        <include>**/*Spec.java</include> <!-- Yes, .java extension -->
-                        <include>**/*Test.java</include> <!-- Just in case having "normal" JUnit tests -->
-                    </includes>
-                </configuration>
-            </plugin>
-
-            <!--jacoco - aprt of build-->
-            <plugin>
-                <!--TODO double code - to check -->
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.6.201602180812</version>
-                <executions>
-                    <execution>
-                        <id>default-prepare-agent</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>default-prepare-agent-integration</id>
-                        <goals>
-                            <goal>prepare-agent-integration</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>default-report</id>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>default-report-integration</id>
-                        <goals>
-                            <goal>report-integration</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>default-check</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <configuration>
-                            <rules>...</rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <!-- checkstyle - Checking for Violations as Part of the Build-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
-                <executions>
-                    <execution>
-                        <id>validate</id>
-                        <phase>validate</phase>
-                        <configuration>
-                            <configLocation>checkstyle.xml</configLocation>
-                            <encoding>UTF-8</encoding>
-                            <consoleOutput>true</consoleOutput>
-                            <failsOnError>true</failsOnError>
-                            <linkXRef>false</linkXRef>
-                        </configuration>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <!--<plugins>-->
+            <!--&lt;!&ndash; compiles Groovy code. &ndash;&gt;-->
+            <!--<plugin>-->
+                <!--&lt;!&ndash; GMavenPlus plugin &ndash;&gt;-->
+                <!--<groupId>org.codehaus.gmavenplus</groupId>-->
+                <!--<artifactId>gmavenplus-plugin</artifactId>-->
+                <!--<version>1.5</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--&lt;!&ndash;<goal>addSources</goal> &ndash;&gt;-->
+
+                            <!--&lt;!&ndash; Invokes the addTestSources goal that adds Groovy tests source to the project's test sources &ndash;&gt;-->
+                            <!--<goal>addTestSources</goal>-->
+
+                            <!--&lt;!&ndash;<goal>generateStubs</goal> &ndash;&gt;-->
+                            <!--<goal>compile</goal>-->
+
+                            <!--&lt;!&ndash;<goal>testGenerateStubs</goal>&ndash;&gt;-->
+
+                            <!--&lt;!&ndash; Invokes the testCompile goal that compiles our Spock tests &ndash;&gt;-->
+                            <!--<goal>testCompile</goal>-->
+
+                            <!--&lt;!&ndash;<goal>removeStubs</goal> &ndash;&gt;-->
+                            <!--&lt;!&ndash;<goal>removeTestStubs</goal>&ndash;&gt;-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-compiler-plugin</artifactId>-->
+                <!--<version>3.3</version>-->
+                <!--<configuration>-->
+                    <!--<source>${jdk.version}</source>-->
+                    <!--<target>${jdk.version}</target>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+            <!--&lt;!&ndash; Used for unit tests &ndash;&gt;-->
+            <!--<plugin>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
+                <!--<version>${surefire.version}</version>-->
+                <!--<configuration>-->
+                    <!--<includes>-->
+                        <!--<include>**/*Spec.java</include> &lt;!&ndash; Yes, .java extension &ndash;&gt;-->
+                        <!--<include>**/*Test.java</include> &lt;!&ndash; Just in case having "normal" JUnit tests &ndash;&gt;-->
+                    <!--</includes>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+
+            <!--&lt;!&ndash;jacoco - aprt of build&ndash;&gt;-->
+            <!--<plugin>-->
+                <!--&lt;!&ndash;TODO double code - to check &ndash;&gt;-->
+                <!--<groupId>org.jacoco</groupId>-->
+                <!--<artifactId>jacoco-maven-plugin</artifactId>-->
+                <!--<version>0.7.6.201602180812</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>default-prepare-agent</id>-->
+                        <!--<goals>-->
+                            <!--<goal>prepare-agent</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>default-prepare-agent-integration</id>-->
+                        <!--<goals>-->
+                            <!--<goal>prepare-agent-integration</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>default-report</id>-->
+                        <!--<goals>-->
+                            <!--<goal>report</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>default-report-integration</id>-->
+                        <!--<goals>-->
+                            <!--<goal>report-integration</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>default-check</id>-->
+                        <!--<goals>-->
+                            <!--<goal>check</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<rules>...</rules>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+
+            <!--&lt;!&ndash; checkstyle - Checking for Violations as Part of the Build&ndash;&gt;-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+                <!--<version>2.17</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>validate</id>-->
+                        <!--<phase>validate</phase>-->
+                        <!--<configuration>-->
+                            <!--<configLocation>checkstyle.xml</configLocation>-->
+                            <!--<encoding>UTF-8</encoding>-->
+                            <!--<consoleOutput>true</consoleOutput>-->
+                            <!--<failsOnError>true</failsOnError>-->
+                            <!--<linkXRef>false</linkXRef>-->
+                        <!--</configuration>-->
+                        <!--<goals>-->
+                            <!--<goal>check</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
     </build>
 
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>checkstyle</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-        </plugins>
-    </reporting>
+    <!--<reporting>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+                <!--<version>2.17</version>-->
+                <!--<reportSets>-->
+                    <!--<reportSet>-->
+                        <!--<reports>-->
+                            <!--<report>checkstyle</report>-->
+                        <!--</reports>-->
+                    <!--</reportSet>-->
+                <!--</reportSets>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</reporting>-->
 
 </project>
